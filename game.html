@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play — ShadowLore</title>
+  <meta name="description" content="Play ShadowLore: The Hollow King — a dark fantasy text adventure. Every choice shapes the fate of a lost kingdom.">
+  <meta name="theme-color" content="#05050a">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌑</text></svg>">
+</head>
+<body>
+
+  <!-- ======= START SCREEN ======= -->
+  <div id="start-screen">
+    <div class="start-bg"></div>
+    <div class="start-overlay"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="start-content">
+      <p class="start-eyebrow">A Dark Fantasy Text Adventure</p>
+      <h1 class="start-title">ShadowLore</h1>
+      <p class="start-sub"><em>The Hollow King — Chapter I of the Anthology</em></p>
+      <div class="start-divider"></div>
+      <div class="start-buttons">
+        <button class="btn-primary" id="btn-new-game">Begin the Anthology</button>
+        <button class="btn-secondary hidden" id="btn-continue">Continue Your Journey</button>
+      </div>
+      <p class="start-note">Mobile-friendly · No account required · ~45–90 min · Multiple endings</p>
+    </div>
+  </div>
+
+  <!-- ======= GAME SCREEN ======= -->
+  <div id="game-screen" class="hidden">
+    <div id="game-bg" data-scene="gate" aria-hidden="true"></div>
+
+    <!-- Game Nav -->
+    <nav class="game-nav" aria-label="Game navigation">
+      <a href="index.html" class="game-nav-logo">SHADOWLORE</a>
+      <button class="game-nav-btn" id="btn-history" aria-label="View journey history">Journal</button>
+      <button class="game-nav-btn" id="btn-restart" aria-label="Restart game">Restart</button>
+    </nav>
+
+    <!-- Stats bar -->
+    <div class="stats-bar" role="status" aria-label="Character stats">
+      <div class="stat-item">
+        <span class="stat-icon">💡</span>
+        <span class="stat-label">Knowledge</span>
+        <span class="stat-val" id="stat-knowledge-val">+0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">⚖️</span>
+        <span class="stat-label">Reputation</span>
+        <span class="stat-val" id="stat-reputation-val">+0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">🗡️</span>
+        <span class="stat-label">Courage</span>
+        <span class="stat-val" id="stat-courage-val">+0</span>
+      </div>
+    </div>
+
+    <!-- Main layout -->
+    <div class="game-layout">
+      <div class="scene-header">
+        <p class="chapter-label" id="chapter-label">Chapter I</p>
+        <p class="scene-label" id="scene-label">The Iron Gate of Valdris</p>
+      </div>
+
+      <!-- Story text -->
+      <main id="story-panel" role="main" aria-live="polite" aria-atomic="false">
+        <div id="story-text"></div>
+      </main>
+
+      <!-- Choices -->
+      <aside id="choices-panel" aria-label="Your choices">
+        <div id="choices" role="list"></div>
+      </aside>
+    </div>
+
+    <!-- History panel -->
+    <div class="history-panel" id="history-panel" role="dialog" aria-label="Journey history">
+      <div class="history-header">
+        <h3>Your Journey</h3>
+        <button class="history-close" id="btn-close-history" aria-label="Close history">✕</button>
+      </div>
+      <ul id="history-list" role="list"></ul>
+    </div>
+  </div>
+
+  <!-- Cookie banner -->
+  <div class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <p><strong>We use cookies</strong> to save your game progress. By continuing, you agree to our <a href="cookies.html">Cookie Policy</a>.</p>
+      </div>
+      <div class="cookie-btns">
+        <button class="btn-cookie-accept">Accept</button>
+        <button class="btn-cookie-decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

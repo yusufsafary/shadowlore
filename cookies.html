@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy — ShadowLore</title>
+  <meta name="theme-color" content="#05050a">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌑</text></svg>">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">SHADOWLORE<span>Dark Fantasy Anthology</span></a>
+    <ul class="nav-links" role="list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="how-to-play.html">How to Play</a></li></ul>
+    <div class="nav-right"><button class="btn-audio" aria-label="Toggle ambient sound">🔇</button><a href="game.html" class="btn-play-nav">Play Now</a><button class="btn-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+  </nav>
+  <div class="nav-drawer" role="dialog" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="how-to-play.html">How to Play</a><a href="game.html" class="btn-play-nav">Play Now</a></div>
+  <main class="legal-wrap">
+    <h1>Cookie Policy</h1>
+    <p class="legal-meta">Last updated: June 2025</p>
+    <h2>What We Store</h2>
+    <p>ShadowLore uses browser <strong>localStorage</strong> (not traditional cookies) for two purposes:</p>
+    <table class="cookie-table" role="table">
+      <thead><tr><th>Name</th><th>Purpose</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr><td><code>sl_game_save</code></td><td>Stores your game progress — current node, flags, stats, history — so you can resume where you left off.</td><td>Until cleared or new game started</td></tr>
+        <tr><td><code>sl_cookie_consent</code></td><td>Remembers whether you accepted or declined the consent banner.</td><td>Until cleared by user</td></tr>
+      </tbody>
+    </table>
+    <p>This data stays entirely on your device and is never transmitted to any server.</p>
+    <h2>What We Do NOT Use</h2>
+    <ul>
+      <li>Advertising or retargeting cookies</li>
+      <li>Analytics tracking (Google Analytics, etc.)</li>
+      <li>Social media tracking pixels</li>
+      <li>Cross-site tracking of any kind</li>
+    </ul>
+    <h2>Third-Party Services</h2>
+    <table class="cookie-table" role="table">
+      <thead><tr><th>Service</th><th>Purpose</th><th>Policy</th></tr></thead>
+      <tbody>
+        <tr><td>GitHub Pages</td><td>Hosting — may log access data</td><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td>Google Fonts</td><td>Font delivery</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td>Unsplash CDN</td><td>Image delivery</td><td><a href="https://unsplash.com/privacy" target="_blank" rel="noopener">View</a></td></tr>
+      </tbody>
+    </table>
+    <h2>Manage Your Data</h2>
+    <p>To clear your game save and consent preference, click below:</p>
+    <button onclick="localStorage.removeItem('sl_game_save');localStorage.removeItem('sl_cookie_consent');alert('Game save and cookie preference cleared.');" style="font-family:var(--font-heading);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-dim);border:1px solid var(--border2);padding:0.65rem 1.5rem;border-radius:3px;margin-top:0.5rem;cursor:pointer;background:none;">Clear All Local Data</button>
+    <h2>Changes</h2>
+    <p>We may update this policy. The "Last updated" date above will change accordingly.</p>
+  </main>
+  <footer class="footer" role="contentinfo"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><p class="footer-logo">SHADOWLORE</p></div><div class="footer-links"><h4>Navigate</h4><ul role="list"><li><a href="index.html">Home</a></li><li><a href="game.html">Play Now</a></li></ul></div><div class="footer-links"><h4>Legal</h4><ul role="list"><li><a href="legal.html">Terms &amp; Privacy</a></li><li><a href="cookies.html">Cookie Policy</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 ShadowLore. All rights reserved.</p></div></div></footer>
+  <div class="cookie-banner" role="dialog" aria-label="Cookie consent"><div class="cookie-inner"><div class="cookie-text"><p><strong>We use cookies</strong> to save your game progress. <a href="cookies.html">Cookie Policy</a>.</p></div><div class="cookie-btns"><button class="btn-cookie-accept">Accept All</button><button class="btn-cookie-decline">Decline</button></div></div></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

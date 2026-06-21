@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowLore — Dark Fantasy Text Adventure</title>
+  <meta name="description" content="ShadowLore is a dark fantasy text adventure anthology playable in your browser. Enter the kingdom of Valdris, face the Hollow King, and choose your fate.">
+  <meta property="og:title" content="ShadowLore — Dark Fantasy Text Adventure">
+  <meta property="og:description" content="Enter Valdris. Face the Hollow King. Every choice shapes the fate of a lost kingdom. Play free in your browser.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&q=80">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#05050a">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌑</text></svg>">
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">SHADOWLORE<span>Dark Fantasy Anthology</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="how-to-play.html">How to Play</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-audio" title="Play Ambient Sound" aria-label="Toggle ambient sound">🔇</button>
+      <a href="game.html" class="btn-play-nav">Play Now</a>
+      <button class="btn-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="how-to-play.html">How to Play</a>
+    <a href="game.html" class="btn-play-nav">Play Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg" role="img" aria-label="Dark fantasy castle ruins"></div>
+    <div class="hero-overlay"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">A Browser-Based Dark Fantasy Game</p>
+      <h1 class="hero-title">ShadowLore</h1>
+      <p class="hero-tagline"><span id="typewriter"></span><span>|</span></p>
+      <div class="hero-cta">
+        <a href="game.html" class="btn-primary">Play Now — Free</a>
+        <a href="about.html" class="btn-secondary">Discover the Lore</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ABOUT THE GAME -->
+  <section class="section" aria-labelledby="game-heading">
+    <div class="section-inner">
+      <p class="section-label reveal">What is ShadowLore?</p>
+      <h2 class="section-title reveal" id="game-heading">A Text Adventure Played in Your Browser</h2>
+      <p class="section-desc reveal">No downloads. No accounts. No redirects. ShadowLore is a complete dark fantasy text adventure — fully playable here, right now, on any device.</p>
+      <div class="features-grid">
+        <div class="feature-item reveal">
+          <div class="feature-icon">📖</div>
+          <h3 class="feature-title">Rich Branching Story</h3>
+          <p class="feature-text">Every choice you make changes what happens next. Explore Valdris your way — through the tavern, the market, or straight to the castle gates.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">🎭</div>
+          <h3 class="feature-title">Multiple Endings</h3>
+          <p class="feature-text">Four distinct endings await: from dark bargains to true redemption. The path you take and the secrets you uncover unlock different fates.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">💾</div>
+          <h3 class="feature-title">Auto-Save Progress</h3>
+          <p class="feature-text">Your journey is saved automatically. Close the browser, come back later — the Hollow King will still be waiting.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">Mobile-First Design</h3>
+          <p class="feature-text">Built for mobile from the ground up. Play on your phone, tablet, or desktop — the shadows follow you everywhere.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">🌑</div>
+          <h3 class="feature-title">Dark Fantasy World</h3>
+          <p class="feature-text">Valdris is a city sealed for seven years, its king hollowed by a bargain with something ancient. Every corner has a story. Every choice has a cost.</p>
+        </div>
+        <div class="feature-item reveal">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Free to Play</h3>
+          <p class="feature-text">No payment. No account. No in-app purchases. ShadowLore is a complete experience, free to anyone who dares enter the gate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LORE QUOTE -->
+  <div class="lore-quote reveal">
+    <blockquote>"In the realm between the living and the forgotten, every story is a wound that never healed. The shadows do not lie — they simply tell truths you were not ready to hear."</blockquote>
+    <cite>— The Archivist of Dusk, ShadowLore Codex I</cite>
+  </div>
+
+  <!-- STORY PREVIEW -->
+  <section class="section" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" aria-labelledby="story-heading">
+    <div class="section-inner">
+      <p class="section-label reveal">The Story So Far</p>
+      <h2 class="section-title reveal" id="story-heading">The Kingdom of Valdris</h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <img class="card-img" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80" alt="Dark mystical forest at night" loading="lazy">
+          <div class="card-body">
+            <p class="card-tag">The Setting</p>
+            <h3 class="card-title">A City Sealed for Seven Years</h3>
+            <p class="card-text">Valdris was sealed when its king made a bargain for immortality and received something worse. Its streets are empty. Its people are gone. Its gate stands ajar.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img class="card-img" src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&q=80" alt="Mystical dark atmosphere" loading="lazy">
+          <div class="card-body">
+            <p class="card-tag">The King</p>
+            <h3 class="card-title">King Morvain, the Hollow</h3>
+            <p class="card-text">He is present the way an echo is present: a record of something that once made noise. He has forgotten he was human. He cannot sleep. He cannot dream.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img class="card-img" src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=600&q=80" alt="Dark cosmic starry sky" loading="lazy">
+          <div class="card-body">
+            <p class="card-tag">Your Role</p>
+            <h3 class="card-title">The Witness Who Arrived</h3>
+            <p class="card-text">You are not a hero. You are someone who came here with reasons they have not yet spoken aloud. What you do with the king — and his kingdom — is entirely up to you.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;" aria-label="Call to action">
+    <div class="section-inner">
+      <p class="section-label reveal" style="justify-content:center;">Ready?</p>
+      <h2 class="section-title reveal">The Gate Is Open. The King Is Waiting.</h2>
+      <p class="section-desc reveal" style="margin: 0 auto 2.5rem;">No experience required. No wrong choices — only different consequences. Your story begins now.</p>
+      <a href="game.html" class="btn-primary reveal">Enter ShadowLore</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">SHADOWLORE</p>
+          <p class="footer-tagline"><em>"Where shadows breathe and whispers hold power."</em></p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-to-play.html">How to Play</a></li>
+            <li><a href="game.html">Play Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul role="list">
+            <li><a href="legal.html">Terms &amp; Privacy</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 ShadowLore. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="legal.html">Terms</a>
+          <a href="legal.html#privacy">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <p><strong>We use cookies</strong> to save your game progress. By continuing, you agree to our <a href="cookies.html">Cookie Policy</a>.</p>
+      </div>
+      <div class="cookie-btns">
+        <button class="btn-cookie-accept">Accept All</button>
+        <button class="btn-cookie-decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
